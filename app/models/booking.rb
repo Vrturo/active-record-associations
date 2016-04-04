@@ -1,6 +1,5 @@
 class Booking < ActiveRecord::Base
   belongs_to :guest, class_name: "User"
-  has_many :hotel
   belongs_to :room
-  belongs_to :hotel
+  has_one :hotel, through: :rooms
 end
